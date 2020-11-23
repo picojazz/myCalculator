@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Calculator {
 
 
@@ -25,5 +27,19 @@ public class Calculator {
 
     public int max(int a, int b){
         return Math.max(a,b);
+    }
+
+    public int minElement(int[] list){
+        Arrays.sort(list);
+        return list[0];
+    }
+    public  int maxElement(int[] list){
+        Arrays.sort(list);
+        for(int i=0; i<list.length/2; i++){
+            int temp = list[i];
+            list[i] = list[list.length -i -1];
+            list[list.length -i -1] = temp;
+        }
+        return list[0];
     }
 }

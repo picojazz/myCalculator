@@ -46,4 +46,18 @@ public class CalculatorTest {
         Assert.assertEquals(39,max);
     }
 
+
+    @Test
+    public void testMinElement(){
+        int minElement = calculator.minElement(new int[] {5,9,1,7,25,14,98,3,7,2});
+        Assert.assertEquals(1,minElement);
+    }
+
+    @Test
+    public void testMaxElement(){
+        int maxElement = calculator.maxElement(new int[] {5,9,1,7,25,14,98,3,7,2});
+        Assert.assertEquals(98,maxElement);
+    }
+
+
 }
